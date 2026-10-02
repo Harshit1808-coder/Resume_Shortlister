@@ -130,13 +130,18 @@ div.stButton>button:focus-visible{outline:3px solid #fff;outline-offset:3px;}
 .legend{color:var(--mute);font-size:.8rem;margin-top:.8rem;}
 .waiting{color:var(--mute);margin-top:3.2rem;text-align:center;}
 
+/* ---------- credit footer ---------- */
+.credit{margin:4rem auto 0;padding:.8rem 1.6rem;width:fit-content;border-radius:999px;
+  font-size:.95rem;color:var(--mute);text-align:center;animation:rise .9s 1.1s both;}
+.credit b{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;color:#fff;letter-spacing:.04em;}
+
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01s!important;animation-iteration-count:1!important;transition:none!important;}}
 </style>
 
 <div class="flow"><i></i><i></i><i></i><i></i></div>
 
 <section class="hero">
-  <div class="badge glass"><b></b>Model ready</div>
+  <div class="badge glass"><b></b>Model ready · Made by HARSHIT PRATAP</div>
   <h1>Find the right hire in seconds</h1>
   <p class="lead">Enter a candidate's experience, skills and projects. Shortlist Desk tells you if they make the cut, and how confident it is.</p>
   <a class="cta" href="#screen">Start screening</a>
@@ -264,3 +269,9 @@ if run:  # bring the result into view straight away, even on small screens
         "if(e)e.scrollIntoView({behavior:'smooth',block:'center'});},120);</script>",
         height=0,
     )
+
+# ---------------------------------------------------------------- credit
+st.markdown(
+    '<div class="credit glass">Made by <b>HARSHIT PRATAP</b></div>',
+    unsafe_allow_html=True,
+)
